@@ -16,5 +16,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['buffer'],
   },
-  // nbase: 'https://ledich19.github.io/portfolio',
+  base: 'https://ledich19.github.io/trenager',
 });
