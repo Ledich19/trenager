@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+// import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import App from './App';
@@ -15,9 +15,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <HashRouter>
-          <App />
-        </HashRouter>
+        {/* <HashRouter> */}
+        <App />
+        {/* </HashRouter> */}
       </Provider>
     </ThemeProvider>
   </React.StrictMode>
