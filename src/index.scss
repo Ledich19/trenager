@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #eae9e9;
+
+  --mainColor: #011627;
+  --textColor: #828282;
+  --activeColor: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body[data-theme="dark-theme"] {
+  --mainColor: #011627;
+  --textColor: #828282;
+  --activeColor: #ffffff;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: 'Fira Code', monospace;
+  color: var(--textColor);
+  // background-image: url(./assets/bg/brett-ritchie-1vKTnwLMdqs-unsplash.jpg);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+//<ПЕРЕМЕННЫЕ>==================================
+$minWidht: 320px;
+$maxWidht: 1152;
+$maxWidhtConteiner: 1600;
+$md1: $maxWidhtConteiner + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//<ОСНОВНАЯ СЕТКА>===================
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: $maxWidhtConteiner + px;
+  margin: 0 auto;
+  @media (max-width: #{$md1}px) {
+    //max-width: 970px;
+  }
+  @media (max-width: #{$md2}px) {
+    //max-width: 750px;
+  }
+  @media (max-width: #{$md3}px) {
+    //max-width: none;
+    padding: 0 10px;
+  }
+}
