@@ -1,4 +1,4 @@
-import { AppBar, Container, Toolbar, Box, Stack, Typography, Avatar } from '@mui/material';
+import { AppBar, Container, Toolbar, Box, Stack, Typography } from '@mui/material';
 import MaterialUISwitch from './MaterialUISwitch';
 
 const Header = () => {

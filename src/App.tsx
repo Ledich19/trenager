@@ -467,7 +467,7 @@ const data = [
 
 const App = () => {
   const [start, setStart] = useState(false);
-  const [position, setPosition] = useState(13);
+  const [position, setPosition] = useState(0);
   const quiz = data[position];
   return (
     <>
