@@ -1,21 +1,8 @@
 import { useState } from 'react';
-import {
-  Box,
-  Button,
-  Chip,
-  Grid,
-  Stack,
-  Snackbar,
-  Alert,
-  IconButton,
-  Card,
-  CardMedia,
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
-import { TestType, Words } from '../app/types';
+import { Box, Button, Stack, Alert, Card } from '@mui/material';
+// import { useTheme } from '@mui/material/styles';
+
+import { TestType } from '../app/types';
 
 type Props = {
   data: TestType;
@@ -26,7 +13,7 @@ type Props = {
 const Test1 = ({ data, position, setPosition }: Props) => {
   const [right, setRight] = useState('');
   const [wrong, setWrong] = useState('');
-  const theme = useTheme();
+  // const theme = useTheme();
   const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
       return;
