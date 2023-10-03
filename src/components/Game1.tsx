@@ -1,16 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Chip, Grid, Stack } from '@mui/material';
 import { Words } from '../app/types';
 
 type Props = {
   data: Words;
+  setCanNext: (el: boolean) => void;
 };
 
-const Game1 = ({ data }: Props) => {
+const Game1 = ({ data, setCanNext }: Props) => {
   const [wordsUa, setWordsUa] = useState(data.map((el) => el.ua).sort(() => Math.random() - 0.5));
   const [wordsEn, setWordsEn] = useState(data.map((el) => el.en).sort(() => Math.random() - 0.5));
   const [wordUa, setWordUa] = useState('');
   const [wordEn, setWordEn] = useState('');
+
+  useEffect(() => {
+    setCanNext(true);
+  }, []);
 
   const handleClickUa = (word: string) => {
     const keyWord = data.find((el) => el.ua === word);
@@ -20,6 +25,9 @@ const Game1 = ({ data }: Props) => {
     } else {
       setWordUa(word);
     }
+    if (wordsUa.length <= 1 || wordsEn.length <= 1) {
+      setCanNext(false);
+    }
   };
   const handleClickEn = (word: string) => {
     const keyWord = data.find((el) => el.en === word);
@@ -28,6 +36,9 @@ const Game1 = ({ data }: Props) => {
       setWordsEn((words) => words.filter((el) => el !== keyWord.en));
     } else {
       setWordEn(word);
+    }
+    if (wordsUa.length <= 1 || wordsEn.length <= 1) {
+      setCanNext(false);
     }
   };
   return (

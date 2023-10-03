@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, Button, Stack, Alert, Card } from '@mui/material';
 // import { useTheme } from '@mui/material/styles';
 
@@ -8,11 +8,18 @@ type Props = {
   data: TestType;
   position: number;
   setPosition: (el: number) => void;
+  canNext: boolean;
+  setCanNext: (el: boolean) => void;
+  setStart: (el: boolean) => void;
 };
 
-const Test1 = ({ data, position, setPosition }: Props) => {
+const Test1 = ({ data, position, setPosition, canNext, setCanNext, setStart }: Props) => {
   const [right, setRight] = useState('');
   const [wrong, setWrong] = useState('');
+
+  useEffect(() => {
+    setCanNext(true);
+  }, [data]);
   // const theme = useTheme();
   const handleClose = (_event?: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
@@ -25,6 +32,7 @@ const Test1 = ({ data, position, setPosition }: Props) => {
     handleClose();
     if (isRight) {
       setRight(data.right || 'success');
+      setCanNext(false);
     } else {
       setWrong(data.wrong);
     }
@@ -88,8 +96,14 @@ const Test1 = ({ data, position, setPosition }: Props) => {
       {right && <Alert severity="success">{right}</Alert>}
       <Stack direction="row" justifyContent="center">
         <Button
+          disabled={canNext}
           onClick={() => {
-            setPosition(position + 1);
+            if (position === 11) {
+              setStart(false);
+              setPosition(0);
+            } else {
+              setPosition(position + 1);
+            }
             handleClose();
           }}
           variant="outlined"

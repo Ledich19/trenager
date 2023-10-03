@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Chip,
   Grid,
@@ -13,9 +13,10 @@ import { Words } from '../app/types';
 
 type Props = {
   data: Words;
+  setCanNext: (el: boolean) => void;
 };
 
-const Game2 = ({ data }: Props) => {
+const Game2 = ({ data, setCanNext }: Props) => {
   const [itemData, setItemData] = useState(
     data.map((el) => ({ img: el.img, en: el.en })).sort(() => Math.random() - 0.5)
   );
@@ -25,11 +26,16 @@ const Game2 = ({ data }: Props) => {
       .sort(() => Math.random() - 0.5)
       .slice(0, Math.ceil(data.length / 2))
   );
-
+  useEffect(() => {
+    setCanNext(true);
+  }, []);
   const handleClickImg = (word: string) => {
     if (wordsEn.includes(word)) {
       setItemData((words) => words.filter((el) => el.en !== word));
       setWordsEn((words) => words.filter((el) => el !== word));
+    }
+    if (itemData.length <= 1 || wordsEn.length <= 1) {
+      setCanNext(false);
     }
   };
 

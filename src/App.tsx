@@ -485,7 +485,8 @@ const data = [
 
 const App = () => {
   const [start, setStart] = useState(false);
-  const [position, setPosition] = useState(7);
+  const [position, setPosition] = useState(0);
+  const [canNext, setCanNext] = useState(false);
   const quiz = data[position];
   return (
     <>
@@ -529,7 +530,7 @@ const App = () => {
               </Stack>
             </>
           )}
-          {start && quiz.type === 'test' && (
+          {/* {start && quiz.type === 'test' && (
             <>
               <Typography align="center">{quiz.text}</Typography>
               <Typography align="center">{quiz.textAfter}</Typography>
@@ -539,14 +540,18 @@ const App = () => {
                 </Button>
               </Stack>
             </>
-          )}
+          )} */}
           {start && quiz.type === 'game1' && (
             <>
               <Typography align="center">{quiz.title}</Typography>
               <Typography align="center">{quiz.text}</Typography>
-              <Game1 data={quiz.words as Words} />
+              <Game1 setCanNext={setCanNext} data={quiz.words as Words} />
               <Stack direction="row" justifyContent="center">
-                <Button onClick={() => setPosition(position + 1)} variant="outlined">
+                <Button
+                  disabled={canNext}
+                  onClick={() => setPosition(position + 1)}
+                  variant="outlined"
+                >
                   Далі
                 </Button>
               </Stack>
@@ -556,9 +561,13 @@ const App = () => {
             <>
               <Typography align="center">{quiz.title}</Typography>
               <Typography align="center">{quiz.text}</Typography>
-              <Game2 data={quiz.words as Words} />
+              <Game2 setCanNext={setCanNext} data={quiz.words as Words} />
               <Stack direction="row" justifyContent="center">
-                <Button onClick={() => setPosition(position + 1)} variant="outlined">
+                <Button
+                  disabled={canNext}
+                  onClick={() => setPosition(position + 1)}
+                  variant="outlined"
+                >
                   Далі
                 </Button>
               </Stack>
@@ -570,7 +579,14 @@ const App = () => {
               <Typography align="center">{quiz.subtitle}</Typography>
               <Typography align="center">{quiz.ask}</Typography>
 
-              <Test1 position={position} setPosition={setPosition} data={quiz as TestType} />
+              <Test1
+                canNext={canNext}
+                setCanNext={setCanNext}
+                setStart={setStart}
+                position={position}
+                setPosition={setPosition}
+                data={quiz as TestType}
+              />
             </>
           )}
           {start && quiz.type === 'phr' && (
