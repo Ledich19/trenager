@@ -2,6 +2,7 @@ export type Words = {
   en: string;
   ua: string;
   transcription?: string;
+  img?: string;
 }[];
 
 export type TestType = {

@@ -8,6 +8,7 @@ import StepperMy from './components/StepperMy';
 import Game1 from './components/Game1';
 import Test1 from './components/Test1';
 import TablePhrases from './components/TablePhrases';
+import Game2 from './components/Game2';
 
 const dataStart = {
   text: [
@@ -182,7 +183,7 @@ const data = [
   {
     type: 'lek',
     img: 'photo_5237960892807762129_y.jpg',
-    text: 'ЛЕКСИКА, ЯКУ ПОТРІБНО ВИВЧИТИ, ЩОБ ПРИДБАТИ КВИТКИ БЕЗ ПОМИЛОК',
+    text: 'ЛЕКСИКА, ЯКУ ПОТРІБНО ВИВЧИТИ, ЗІБРАТИ ВАЛІЗУ БЕЗ ПОМИЛОК',
     textAfter: 'Якщо ви готові перейти до першого завдання, то тисніть на кнопку нижче.',
 
     words: [
@@ -226,6 +227,23 @@ const data = [
         transcription: 'ˈdɛkəˌreɪtɪv kɑzˈmɛtɪks',
       },
       { en: 'wallet', ua: 'гаманець', transcription: 'ˈwɑlɪt' },
+    ],
+  },
+  {
+    type: 'game2',
+    img: 'photo_5237960892807762129_y.jpg',
+    title: 'ЛЕКСИКА, ЯКУ ПОТРІБНО ВИВЧИТИ, ЗІБРАТИ ВАЛІЗУ БЕЗ ПОМИЛОК',
+    text: 'Якщо ви готові перейти до першого завдання, то тисніть на кнопку нижче.',
+    words: [
+      { en: 'suitcase', ua: 'валіза', img: '5.jpg' },
+      { en: 'laptop', ua: 'ноутбук', img: '1.jpg' },
+      { en: 'sunglasses', ua: 'сонцезахисні окуляри', img: '2.jpg' },
+      { en: 'earphones', ua: 'навушники', img: '3.jpg' },
+      {
+        en: 'decorative cosmetics',
+        ua: 'декоративна косметика',
+        img: '4.jpg',
+      },
     ],
   },
   {
@@ -467,7 +485,7 @@ const data = [
 
 const App = () => {
   const [start, setStart] = useState(false);
-  const [position, setPosition] = useState(0);
+  const [position, setPosition] = useState(7);
   const quiz = data[position];
   return (
     <>
@@ -527,6 +545,18 @@ const App = () => {
               <Typography align="center">{quiz.title}</Typography>
               <Typography align="center">{quiz.text}</Typography>
               <Game1 data={quiz.words as Words} />
+              <Stack direction="row" justifyContent="center">
+                <Button onClick={() => setPosition(position + 1)} variant="outlined">
+                  Далі
+                </Button>
+              </Stack>
+            </>
+          )}
+          {start && quiz.type === 'game2' && (
+            <>
+              <Typography align="center">{quiz.title}</Typography>
+              <Typography align="center">{quiz.text}</Typography>
+              <Game2 data={quiz.words as Words} />
               <Stack direction="row" justifyContent="center">
                 <Button onClick={() => setPosition(position + 1)} variant="outlined">
                   Далі
