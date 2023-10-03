@@ -1,21 +1,7 @@
-import {
-  Box,
-  Button,
-  Container,
-  Paper,
-  Stack,
-  Typography,
-  TableContainer,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-} from '@mui/material';
-import Header from './components/Header/Header';
-import AttachmentIcon from '@mui/icons-material/Attachment';
-import Start from './components/Start';
 import { useState } from 'react';
+import { Box, Button, Container, Paper, Stack, Typography } from '@mui/material';
+import Header from './components/Header/Header';
+import Start from './components/Start';
 import TableMine from './components/Table';
 import { TestType, Words } from './app/types';
 import StepperMy from './components/StepperMy';
@@ -559,16 +545,14 @@ const App = () => {
           )}
           {start && quiz.type === 'phr' && (
             <>
-              <>
-                <Typography align="center">{quiz.text}</Typography>
-                <TablePhrases data={quiz.words as Words} />
-                <Typography align="center">{quiz.textAfter}</Typography>
-                <Stack direction="row" justifyContent="center">
-                  <Button onClick={() => setPosition(position + 1)} variant="outlined">
-                    Далі
-                  </Button>
-                </Stack>
-              </>
+              <Typography align="center">{quiz.text}</Typography>
+              <TablePhrases data={quiz.words as Words} />
+              <Typography align="center">{quiz.textAfter}</Typography>
+              <Stack direction="row" justifyContent="center">
+                <Button onClick={() => setPosition(position + 1)} variant="outlined">
+                  Далі
+                </Button>
+              </Stack>
             </>
           )}
         </Container>
