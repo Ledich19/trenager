@@ -646,6 +646,237 @@ const data = [
     img: 'photo_5237960892807762246_y.jpg',
     text: 'Завдання виконано правильно. Ви успішно зареєстровані на рейс ✅ Якщо готові перейти до наступного завдання, то клікайте на кнопку нижче.',
   },
+  {
+    type: 'info',
+    img: 'photo_5237960892807762246_y.jpg',
+    title: 'СХЕМА "ПРАВИЛА ПОБУДОВИ РЕЧЕНЬ" ТА ГОТОВІ ФРАЗИ ДЛЯ ДІАЛОГУ З НОВИМИ ЗНАЙОМИМИ',
+    text: 'За допомогою схеми та готових фраз, розберіться в правилах побудови речень і діалогу англійською',
+  },
+  {
+    type: 'learn',
+    img: '',
+    title: '1. Розповідні речення ',
+    text: '',
+    schema:
+      'The Subject – підмет (Хто? Що?) ➡️ The Predicate – присудок (Що робить? В якому стані знаходиться? Ким або чим виявляється?) ➡️ Object – додаток (Кого? Чого? Що? Кому? Чому? Ким? Чим?) ➡️ Adverbial Modifier – обставина (Де? Коли? Як? Куди?)',
+    examples: [
+      {
+        en: 'I have been working as a marketer for 6 years.',
+        ua: 'Я працюю маркетологом вже 6 років.',
+      },
+      { en: "I'm going on a tour of Paris tomorrow.", ua: 'Я піду на екскурсію Парижем завтра.' },
+    ],
+  },
+  {
+    type: 'learn',
+    img: '',
+    title: '2. Питальні речення',
+    text: 'Вибір допоміжного дієслова залежить від граматичного часу в реченні.',
+    schema:
+      'Допоміжне дієслово / модальне дієслово (can, could, may, might, must, should, ought) ➡️ підмет ➡️ присудок ➡️ додаток ➡️ обставина',
+    examples: [
+      {
+        en: 'Do you play the piano?',
+        ua: 'Ти граєш на роялі? (Present Simple - Теперішній простий час)',
+      },
+      {
+        en: 'Are you working now?',
+        ua: 'Ти працюєш зараз? (Present Continuous - Теперішній тривалий час)',
+      },
+      {
+        en: 'Have they already finished their project?',
+        ua: 'Вони вже закінчили свій проект? (Present Perfect - Теперішній доконаний час)',
+      },
+      {
+        en: 'Will you be free tomorrow morning?',
+        ua: 'Чи ти будеш вільний завтра вранці? (Future Simple - Майбутній простий час)',
+      },
+    ],
+  },
+  {
+    type: 'learn',
+    img: '',
+    title: '3. Спеціальні питання',
+    text: `Вид питання, який використовується для отримання додаткової конкретної інформації, з'ясування певного факту або обставини. На спеціальні питання не можна дати відповідь тільки «так» або «ні».
+
+Спеціальні питання завжди починаються з певного питального слова, що вказує на те, яка саме інформація необхідна. Після питального слова вживається такий самий порядок слів, що й в загальному питанні.`,
+    schema: '',
+    examples: [
+      { en: 'What do you want to see in Paris?', ua: 'Що ти хочеш подивитися в Парижі?' },
+      { en: 'Where will you go first in Paris?', ua: 'Куди ти підеш в першу чергу в Парижі?' },
+      { en: 'How can I find the subway?', ua: 'Як я можу знайти метро?' },
+    ],
+  },
+  {
+    type: 'learn',
+    img: '',
+    title: 'Розповідні фрази',
+    text: '',
+    schema: '',
+    examples: [
+      {
+        en: 'Hello! My name is Julia. I am 26 and I am from Ukraine.',
+        ua: 'Привіт! Мене звати Юлія. Мені 26, і я з України.',
+      },
+      {
+        en: 'I have been working as a marketer in a Ukrainian advertising agency for 6 years.',
+        ua: 'Я працюю маркетологом в українській рекламній агенції вже 6 років.',
+      },
+      {
+        en: 'I love traveling and do it at least once every 2 months.',
+        ua: 'Я дуже люблю подорожувати і роблю це принаймні 1 раз на 2 місяці.',
+      },
+      {
+        en: 'I am traveling to Paris for the first time. Seeing the Eiffel Tower has been my dream since childhood.',
+        ua: 'Я подорожую до Парижу вперше. Побачити Ейфелеву вежу - це моя мрія з дитинства.',
+      },
+      {
+        en: 'I enjoy hiking in major cultural capitals and meeting new people of different nationalities.',
+        ua: 'Мені подобаються піші прогулки великими культурними столицями та нові знайомства з людьми різних національностей.',
+      },
+      {
+        en: 'I have been learning English for six months now. My goal is to reach C1 level in the next six months.',
+        ua: 'Я вчу англійську вже пів року. Моя ціль - рівень С1 за наступні півроку.',
+      },
+    ],
+  },
+  {
+    type: 'learn',
+    img: '',
+    title: 'Питальні фрази',
+    text: '',
+    schema: '',
+    examples: [
+      {
+        en: 'What is your name? How old are you? Where are you from?',
+        ua: 'Як тебе звати? Скільки тобі років? Звідки ти?',
+      },
+      { en: 'What do you do for living and where do you work?', ua: 'Ким і де ти працюєш?' },
+      {
+        en: 'Do you like to travel? How often do you travel?',
+        ua: 'Чи подобається тобі подорожувати? Як часто ти подорожуєш?',
+      },
+      {
+        en: 'Have you ever been to Paris before? What do you want to see in Paris?',
+        ua: 'Чи бувала ти в Парижі раніше? Що ти хочеш подивитися в Парижі?',
+      },
+      {
+        en: 'What do you like to do in your free time?',
+        ua: 'Чим ти любиш займатися у вільний час?',
+      },
+      {
+        en: 'How long have you been learning English? What is your goal?',
+        ua: 'Скільки часу ти вивчаєш англійську? Яка в тебе ціль?',
+      },
+    ],
+  },
+
+  {
+    type: 'test',
+    title: '🔹Завдання 6 - Тест 1/4',
+    subtitle: 'Ознайомтеся із завданням нижче та оберіть відповідь з варіантів на картинці',
+    ask: 'Dialogue with a new friend from America on an airplane. You need to tell your new friend about yourself. Choose the correct answer according to the rules of sentence construction you have learned.',
+    wrong:
+      'Завдання виконано неправильно 📛 Повторіть лексику, прочитайте завдання ще раз і повторіть спробу. Ваші квитки чекають на вас!',
+    right: '',
+    answers: [
+      {
+        value: 'A) Hi! Sure, yeah. Yulia my name is. From Ukraine I am.',
+        isRight: false,
+      },
+      {
+        value: 'B) Hi! Yeah, sure. My name is Yulia, I am from Ukraine.',
+        isRight: true,
+      },
+      {
+        value: 'С) Yeah, sure. Hi! Ukraine am I from. My name is Yulia.',
+        isRight: false,
+      },
+    ],
+    img: 'photo_5237960892807762249_y.jpg',
+    audio: '',
+  },
+  {
+    type: 'test',
+    title: '🔹Завдання 6 - Тест 2/4',
+    subtitle: 'Ознайомтеся із завданням нижче та оберіть відповідь з варіантів на картинці',
+    ask: 'Dialogue with a new friend from America on an airplane. You need to tell your new friend about yourself. Choose the correct answer according to the rules of sentence construction you have learned.',
+    wrong:
+      'Завдання виконано неправильно 📛 Повторіть лексику, прочитайте завдання ще раз і повторіть спробу. Ваші квитки чекають на вас!',
+    right: '',
+    answers: [
+      {
+        value:
+          'А) I have been working as a marketer in a Ukrainian advertising agency for 6 years.',
+        isRight: true,
+      },
+      {
+        value:
+          'В) I have working been as a marketer in a Ukrainian advertising agency for 6 years.',
+        isRight: false,
+      },
+      {
+        value:
+          'С) I as a marketer have been working in a Ukrainian advertising agency for 6 years.',
+        isRight: false,
+      },
+    ],
+    img: 'photo_5237960892807762250_y.jpg',
+    audio: '',
+  },
+  {
+    type: 'test',
+    title: '🔹Завдання 6 - Тест 3/4',
+    subtitle: 'Ознайомтеся із завданням нижче та оберіть відповідь з варіантів на картинці',
+    ask: 'Dialogue with a new friend from America on an airplane. You need to tell your new friend about yourself. Choose the correct answer according to the rules of sentence construction you have learned.',
+    wrong:
+      'Завдання виконано неправильно 📛 Повторіть лексику, прочитайте завдання ще раз і повторіть спробу. Ваші квитки чекають на вас!',
+    right: '',
+    answers: [
+      {
+        value: 'A) You like to do travel? How often you do travel?',
+        isRight: false,
+      },
+      {
+        value: 'B) Do like you to travel? How often do you travel?',
+        isRight: false,
+      },
+      {
+        value: 'C) Do you like to travel? How often do you travel?',
+        isRight: true,
+      },
+    ],
+    img: 'photo_5246790963316248736_y.jpg',
+    audio: '',
+  },
+  {
+    type: 'test',
+    title: '🔹Завдання 6 - Тест 3/4',
+    subtitle: 'Ознайомтеся із завданням нижче та оберіть відповідь з варіантів на картинці',
+    ask: 'Dialogue with a new friend from America on an airplane. You need to tell your new friend about yourself. Choose the correct answer according to the rules of sentence construction you have learned.',
+    wrong:
+      'Завдання виконано неправильно 📛 Повторіть лексику, прочитайте завдання ще раз і повторіть спробу. Ваші квитки чекають на вас!',
+    right: '',
+    answers: [
+      {
+        value:
+          'A) I been have English learning for six months now. My goal to reach C1 is level in the next six months.',
+        isRight: false,
+      },
+      {
+        value:
+          "B) I've been learning English for six months now. My goal is to reach C1 level in the next six months.",
+        isRight: false,
+      },
+      {
+        value:
+          'C)  I have been learning for six months English now. My goal is in the next six months to reach C1 level.',
+        isRight: true,
+      },
+    ],
+    img: 'photo_5246790963316248737_y.jpg',
+    audio: '',
+  },
 ];
 
 const App = () => {
@@ -759,6 +990,29 @@ const App = () => {
               <Typography align="center">{quiz.text}</Typography>
               <TablePhrases data={quiz.words as Words} />
               <Typography align="center">{quiz.textAfter}</Typography>
+              <Stack direction="row" justifyContent="center">
+                <Button onClick={() => setPosition(position + 1)} variant="outlined">
+                  Далі
+                </Button>
+              </Stack>
+            </>
+          )}
+          {start && quiz.type === 'learn' && (
+            <>
+              <Typography align="center" variant="h4">
+                {quiz.title}
+              </Typography>
+              {quiz.schema && (
+                <Typography mt={2} align="center" variant="h5">
+                  схема
+                </Typography>
+              )}
+              <Typography align="center">{quiz.schema}</Typography>
+              <Typography align="center">{quiz.text}</Typography>
+              <Typography mt={2} align="center" variant="h5">
+                приклади
+              </Typography>
+              <TablePhrases data={quiz.examples as Words} />
               <Stack direction="row" justifyContent="center">
                 <Button onClick={() => setPosition(position + 1)} variant="outlined">
                   Далі

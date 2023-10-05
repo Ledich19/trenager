@@ -98,7 +98,7 @@ const Test1 = ({ data, position, setPosition, canNext, setCanNext, setStart }: P
         <Button
           disabled={canNext}
           onClick={() => {
-            if (position >= 16) {
+            if (position >= 33) {
               setStart(false);
               setPosition(0);
             } else {
